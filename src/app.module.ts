@@ -4,6 +4,7 @@ import { CustomersModule } from './customers/customers.module';
 import { UsersModule } from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
+import { PaymentsModule } from './payments/payments.module';
 import entities from './typeorm';
 
 @Module({
@@ -24,6 +25,7 @@ import entities from './typeorm';
     PassportModule.register({
       session: true,
     }),
+    PaymentsModule,
   ],
   controllers: [],
   providers: [],
